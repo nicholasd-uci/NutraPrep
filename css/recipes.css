@@ -1,0 +1,64 @@
+* {
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    background-color: rgb(250, 246, 241);
+}
+
+.tableDisplay {
+    display: none;
+}
+
+.menu {
+    color: lightblue;
+}
+
+.card {
+    background-color: rgb(250, 246, 241);
+    text-align: center;
+}
+.about {
+    background-color: lightblue;
+}
+
+#Nav {
+    background-color: lightblue;
+}
+
+#categories {
+    align-content: center;
+}
+
+.third {
+    width: 60%;
+    min-height: 80%;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+#header {
+    margin-top: 26px;
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 500px) {
+
+}
+
+@media (max-width: 400px) {
+    
+}
+
+#footer {
+    position: static;
+    font-size: large;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: orangered;
+    text-align: center;
+}

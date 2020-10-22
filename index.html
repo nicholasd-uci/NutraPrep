@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutraPrep</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="Assets/img/faviconLogo.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">NutraPrep</div>
+    <div id="container">
+
+        <div style="overflow: hidden;height: 25px;">
+            <!-- For Demo, Represents the body -->
+
+            <nav id="Nav" class="demo">
+                <a href="#" class="brand">
+                    <img class="logo" src="Assets/img/2020-08-04 (2).png">
+                    <span id="navBarMotto">NutraPrep</span>
+                </a>
+
+                <!-- responsive-->
+                <input id="bmenub" type="checkbox" class="show">
+                <label for="bmenub" class="burger pseudo button warning">Menu</label>
+
+                <div class="menu">
+                    <a href="index.html" class="button warning">Home</a>
+                    <a href="./html/nutrition.html" class="button warning">Nutrition</a>
+                    <a href="./html/recipes.html" class="button warning">Category</a>
+                    <!-- <a href="./html/shopping.html" class="button warning">Shopping List</a> -->
+                </div>
+            </nav>
+           
+        </div>
+        <article id="header" class="card">
+            <header>
+                <h1>Home</h1>
+                <br>
+            </header>
+            <footer class="motto">
+                <p>Nutrition + Preperation = No Problem</p>
+            </footer>
+        </article>
+        <h3 id="quote">This is where the quote will go</h3>
+        <div>
+            <div id="about" class="card">
+                <div id="logo">
+                <img src="Assets/img/2020-08-04 (2).png" alt="NutraPrep Logo" id="nutraLogo">
+                </div>
+                <arti>
+            </div>
+            <article class="card">
+        <!-- <fieldset class="flex two">
+            <label><input type="search" placeholder="what are you looking for"></label>
+        </fieldset>
+        <button class="warning">search</button> -->
+                <header>
+                    <h3>About NutraPrep</h3>
+                </header>
+                <footer>
+                    <p>NutraPrep is an app designed to help you with your food prep needs.  You'll be able to search up foods and recipes to find out their nutritional value.  You'll also be able to look for recipes by a specific protein you may have on hand, (like chicken for example), or you can look for a recipe that fits a dietary need with the categories provided.</p>
+                </footer>
+            </article>
+        </div>
+    <div class="flex two center demo">
+        <div class="half">
+            <article id="nutritionTab" class="card">
+                <header>About the Nutrition Tab:</header>
+                <footer>Search for a food and find out its nutritional value!  You'll find information about it's amount of calories, fats, sugars and proteins.</footer>
+            </article>
+        </div>
+        <div class="half">
+            <article id="recipeTab" class="card">
+                <header>About the category Tab:</header>
+                <footer>This is where you'll be able to search for a meal by one of the categories provided.  You'll be able to look up a meal that is: low carb, low sodium, low calorie, low sugar or high in protein.</footer>
+            </article>
+        </div>
+    </div>
+    <div id="footer">
+        <footer>
+            <p>Developed By | ❤️️ NutraPrep ~ Dream Team
+                &copy; NutraPrep</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="./Assets/js/index.js"></script> -->
+    <script>
+         function quote() {
+            axios.get("https://type.fit/api/quotes")
+            .then(result=>{
+                let quote = result.data
+                console.log(quote)
+                let i = Math.floor(Math.random() * quote.length)
+                console.log(quote[i])
+                document.getElementById("quote").innerHTML = `${quote[i].text} - ${quote[i].author}`
+            }) 
+            .catch(quoteError => {console.log(quoteError)}
+            ) 
+        } 
+        quote()
+    </script>  
+</body>
+
+</html>
+
